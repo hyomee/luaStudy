@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lua 학습 by hyomee</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Lua 학습</h1>
+        <p>Lua 학습 공간</p>
+
+        <p class="view"><a href="https://github.com/hyomee/luaStudy">View the Project on GitHub <small>hyomee/luaStudy</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hyomee/luaStudy/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hyomee/luaStudy/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hyomee/luaStudy">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="lua" class="anchor" href="#lua" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lua</h2>
+
+<hr>
+
+<p>ESP8266 Node MCU에서 Lua을 이용한 프로그램을 학습 하기 위한 학습 사이트 입니다.</p>
+
+<p>매우 작은 스크립트 언어로 ANSI C 크드로 6천 줄 정도로 되어 있다.</p>
+
+<p><strong>Lua 특징</strong>
+1. OOP 특성을 살리는데 매우 적합한 함수 구조를 제공 합니다.
+2. 연관배열을 제공 하여, 강력한 데이터 관리를 할 수 있도록 해 줍니다.
+3. 프로그래머에게 명시적으로 메모리 할당을 관리 할 수 있게 할 떄, 발생 가능한 메모리 문제를 Garbage Collection(GC)을 통해 줄일 수 있습니다.
+4. fallback mechanism을 지원 합니다.
+5. 다양한 형태를 구현할 수 있도록 재귀적 특성을 지원합니다.</p>
+
+<p><strong>Lua 설치</strong>
+1. 다운로드 :: <a href="http://luabinaries.sourceforge.net/download.html">http://luabinaries.sourceforge.net/download.html</a></p>
+
+<p><strong>Lua 실행 옵션</strong></p>
+
+<ul>
+<li>-e 스트링 :: 스트링에 해당 하는 문장을 실행 합니다.</li>
+<li>-l libname :: libname에 해당 하는 라이브러리를 실행 합니다.</li>
+<li>-v :: 인터프리터릐 버전 정보를 표시해 줍니다.</li>
+<li>-i :: script를 수행한 후에 interractive 모드로 들어 갑니다.</li>
+</ul>
+
+<p><strong>Lua 실행</strong></p>
+
+<pre><code>** prompt에서 실행 
+prompt&gt;lua53
+Lua 5.3.3  Copyright (C) 1994-2016 Lua.org, PUC-Rio
+&gt;print ("hello lua!!!");
+hello lua!!!
+&gt;Ctrl+c
+prompt&gt;
+
+** 파일을 실행
+prompt&gt;lua53 C:\ESP8266\Study\hello.lua
+hello lua!!!
+prompt&gt;
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hyomee">hyomee</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
