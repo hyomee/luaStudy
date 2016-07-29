@@ -7,93 +7,92 @@ Lua에서 Table을 배열 처럼 움직이는데 다음과 같은 특징이 있�
 5. index의 삭제는 nil을 설정 해 주면 됩니다.
 
 예제1] 간단한 Table 예제
-```
---table 생성
-examTable = {10,20}
-print("examtable :: "..examTable[1])
---table 생성
-examTableCr = {x=10,y=20}
-print("examTableCr :: x :: "..examTableCr["x"])
-print("examTableCr :: y :: "..examTableCr["y"])
-z = examTableCr["x"] + examTableCr["y"] 
-examTableCr["z"] = z
-print("examTableCr :: z :: "..examTableCr["z"])
--- 참조 
-ref = examTableCr
-print("ref :: z :: "..ref["z"])
 
-결과 ==> 
-examtable :: 10
-examTableCr :: x :: 10
-examTableCr :: y :: 20
-examTableCr :: z :: 30
-ref :: z :: 30
-```
+    --table 생성
+    examTable = {10,20}
+    print("examtable :: "..examTable[1])
+    --table 생성
+    examTableCr = {x=10,y=20}
+    print("examTableCr :: x :: "..examTableCr["x"])
+    print("examTableCr :: y :: "..examTableCr["y"])
+    z = examTableCr["x"] + examTableCr["y"] 
+    examTableCr["z"] = z
+    print("examTableCr :: z :: "..examTableCr["z"])
+    -- 참조 
+    ref = examTableCr
+    print("ref :: z :: "..ref["z"])
+
+    결과 ==> 
+    examtable :: 10
+    examTableCr :: x :: 10
+    examTableCr :: y :: 20
+    examTableCr :: z :: 30
+    ref :: z :: 30
 
 예제2] Table 생성 
-```
-exTable1 = {10,20}
-exTable2 = {[1] = 10, [2] = 20}
--- 0 붜터 시작 하는 경우 
-exTable3 = {[0] = 10,20,30,40,50}
 
-print("exTable1 :: index 1 ::"..exTable1[1])
-print("exTable2 :: index 1 ::"..exTable2[1])
-print("exTable3 :: index 0 ::"..exTable3[0])
+    exTable1 = {10,20}
+    exTable2 = {[1] = 10, [2] = 20}
+    -- 0 붜터 시작 하는 경우 
+    exTable3 = {[0] = 10,20,30,40,50}
 
-결과 =>
-exTable1 :: index 1 ::10
-exTable2 :: index 1 ::10
-exTable3 :: index 0 ::10
-```
+    print("exTable1 :: index 1 ::"..exTable1[1])
+    print("exTable2 :: index 1 ::"..exTable2[1])
+    print("exTable3 :: index 0 ::"..exTable3[0])
+
+    결과 =>
+    exTable1 :: index 1 ::10
+    exTable2 :: index 1 ::10
+    exTable3 :: index 0 ::10
+
 
 예제3] 중첩된 Table 생성
-```
-exTable = {
-    x = 10,
-    {x = 20, y = 30},
-    {a = 40, b = 50}
-}
-print(exTable)
-print(exTable[0])
-print("exTable['x'] = "..exTable.x)
-print(exTable[1])
-print("exTable[1].x = "..exTable[1].x)
-print(exTable[2])
-print("exTable[2].a = "..exTable[2].a)
 
-결과 =>
-table: 00000000010c9ac0
-nil
-exTable['x'] = 10
-table: 00000000010c9700
-exTable[1].x = 20
-table: 00000000010c9b40
-exTable[2].a = 40
-```
+    exTable = {
+        x = 10,
+        {x = 20, y = 30},
+        {a = 40, b = 50}
+    }
+    print(exTable)
+    print(exTable[0])
+    print("exTable['x'] = "..exTable.x)
+    print(exTable[1])
+    print("exTable[1].x = "..exTable[1].x)
+    print(exTable[2])
+    print("exTable[2].a = "..exTable[2].a)
+
+    결과 =>
+    table: 00000000010c9ac0
+    nil
+    exTable['x'] = 10
+    table: 00000000010c9700
+    exTable[1].x = 20
+    table: 00000000010c9b40
+    exTable[2].a = 40
+
 
 예제 4] Table 삭제
-```
-exTable = {10,20,30}
-for values in pairs(exTable) do
-    print(values)
-end
 
-exTable[2] = nill
+    exTable = {10,20,30}
+    for values in pairs(exTable) do
+        print(values)
+    end
 
-print("******* after delete  ********")
-for values in pairs(exTable) do
-    print(values)
-end
+    exTable[2] = nill
 
-결과 =>
-1
-2
-3
-******* after delete  ********
-1
-3
-```
+    print("******* after delete  ********")
+    for values in pairs(exTable) do
+        print(values)
+    end
+
+    결과 =>
+    1
+    2
+    3
+    ******* after delete  ********
+    1
+    3
+
 
 **\* Table의 활용 \***
 * 배열
