@@ -19,20 +19,20 @@
 * -i :: script를 수행한 후에 interractive 모드로 들어 갑니다.
 
 **Lua 실행**
-```
-** prompt에서 실행 
-prompt>lua53
-Lua 5.3.3  Copyright (C) 1994-2016 Lua.org, PUC-Rio
->print ("hello lua!!!");
-hello lua!!!
->Ctrl+c
-prompt>
 
-** 파일을 실행
-prompt>lua53 C:\ESP8266\Study\hello.lua
-hello lua!!!
-prompt>
-```
+    ** prompt에서 실행 
+    prompt>lua53
+    Lua 5.3.3  Copyright (C) 1994-2016 Lua.org, PUC-Rio
+    >print ("hello lua!!!");
+    hello lua!!!
+    >Ctrl+c
+    prompt>
+
+    ** 파일을 실행
+    prompt>lua53 C:\ESP8266\Study\hello.lua
+    hello lua!!!
+    prompt>
+
 **Lua 학습 순서**
 * [변수](variable.md)
 * [연산자](operation.md)
