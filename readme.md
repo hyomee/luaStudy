@@ -33,3 +33,9 @@ prompt>lua53 C:\ESP8266\Study\hello.lua
 hello lua!!!
 prompt>
 ```
+**Lua 학습 순서**
+1. [변수](variable.md)
+2. [연산자](operation.md)
+3. [함수](function.md)
+4. [테이블](table.md)
+5. [클래스](class.md)
